@@ -21,8 +21,8 @@ public class TocHw4 {
 				json = jsonRealPrice.getJSONObject(i);
 				name = json.optString("土地區段位置或建物區門牌");
 				price = Integer.valueOf(json.optString("總價元"));
-				if(name.indexOf('大') == name.indexOf('道')-1) name = name.substring(0, name.indexOf('道')+1);
-				else if(name.indexOf('路') != -1) name = name.substring(0, name.indexOf('路')+1);
+				if(name.indexOf('路') != -1) name = name.substring(0, name.indexOf('路')+1);
+				else if(name.indexOf('大') == name.indexOf('道')-1) name = name.substring(0, name.indexOf('道')+1);
 				else if(name.indexOf('街') != -1) name = name.substring(0, name.indexOf('街')+1);
 				else if(name.indexOf('巷') != -1) name = name.substring(0, name.indexOf('巷')+1);
 				else continue;
